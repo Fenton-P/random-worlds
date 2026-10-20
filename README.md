@@ -1,4 +1,4 @@
-# Random Dungeon Generator<sup>2</sup>
+# Random World<sup>2</sup>
 The Random Dungeon Generator<sup>2</sup> (RDG2) is going to be a tool for game developers
 using platforms like unity or godot to allow them to import files and scripts for randomly
 generating dungeons that they’ve designed using the app. The two major components of this 
