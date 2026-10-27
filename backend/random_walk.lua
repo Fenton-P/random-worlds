@@ -1,8 +1,10 @@
+math.randomseed(os.time())
+
 --TODO: read the json file 'data.json' to gather fill in the following variables
-Grid_Width = 10;
-Grid_Height = 10;
-Max_Tunnels = 5;
-Max_Tunnel_Length = 5;
+Grid_Width = 50;
+Grid_Height = 30;
+Max_Tunnels = 80;
+Max_Tunnel_Length = 20;
 
 --TODO: Use the read data in order to generate a dungeon using the random walk technique
 local function find_max_bounds(x, y, dx, dy, width, height, max_length)
@@ -23,6 +25,7 @@ local function find_max_bounds(x, y, dx, dy, width, height, max_length)
 end
 
 local function rand_walk_generate(width, height, max_tunnels, max_length)
+
     if (width <= 0 or height <= 0 or max_tunnels <= 0 or max_length <= 1) then
         error("Invalid parameters for dungeon generation")
     end
