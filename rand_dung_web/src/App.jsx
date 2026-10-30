@@ -10,6 +10,7 @@ import { Dashboard } from "@/pages/dashboard";
 import { VerifyEmail } from "@/pages/verify-email";
 import { Settings } from "@/pages/settings";
 import { CreateProject } from "@/pages/create-project";
+import { EditProject } from "@/pages/edit-project";
 import { useEffect, useState } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { VerifiedMenuItems, UnverifiedMenuItems, VerifyEmailItems } from "@/components/menu-items";
@@ -109,6 +110,7 @@ function App() {
                 <CreateProject />
               </RequireVerifiedUser>
             } />
+            <Route path="/edit" element={<EditProject user={user} authLoading={authLoading} />} />
           </Routes>
         </Router> 
     </AppProviders>
